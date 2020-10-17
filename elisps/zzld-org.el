@@ -25,7 +25,6 @@
 
 ;;; Code:
 
-
 ;; 设置默认 Org Agenda 文件目录
 (with-eval-after-load 'org
     (org-babel-do-load-languages
@@ -75,4 +74,4 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 (provide 'zzld-org)
-;;; zzld-java.el ends here
+;;; zzld-org.el ends here
