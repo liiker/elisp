@@ -53,10 +53,17 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; enable zsh path
+;; enable load app from zsh path
 (let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
   (setenv "PATH" path)
   (setq exec-path
         (append
          (split-string-and-unquote path ":")
          exec-path)))
+
+;; Add my elisp folder to load path.
+(add-to-list 'load-path (expand-file-name "~/.doom.d/elisps"))
+
+(require 'zzld-java)
+
+(require 'zzld-org)

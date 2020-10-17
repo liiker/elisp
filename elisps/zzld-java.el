@@ -24,6 +24,16 @@
 
 ;;; Code:
 
+(setq java-lombok-path
+      "/Users/mac/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar")
+
+(setq lsp-java-vmargs
+            `("-noverify"
+              "-Xmx1G"
+              "-XX:+UseG1GC"
+              "-XX:+UseStringDeduplication"
+              ,(concat "-javaagent:" java-lombok-path)
+              ,(concat "-Xbootclasspath/a:" java-lombok-path)))
 
 
 (provide 'zzld-java)
