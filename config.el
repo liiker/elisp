@@ -64,6 +64,13 @@
 ;; Add my elisp folder to load path.
 (add-to-list 'load-path (expand-file-name "~/.doom.d/elisps"))
 
+;; empty url proxy
+(defun empty-proxy ()
+  (interactive)
+  (setq url-proxy-services '()))
+
+(setq company-idle-delay 0)
+
 (require 'zzld-java)
 
 (require 'zzld-org)
