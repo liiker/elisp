@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: create table
+# key: createtable
+# --
+
+create table $1 (
+    \`id\` int not null auto_increment,
+    \`doc_id\` varchar(256) not null,
+    $0
+    \`create_at\` timestamp null,
+    \`updated_at\` timestamp null,
+    \`deleted\` int default 0,
+    \`primary\` key (id)
+);

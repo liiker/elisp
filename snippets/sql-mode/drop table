@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: drop table
+# key: droptable
+# --
+drop table if exists \`$1\`;
